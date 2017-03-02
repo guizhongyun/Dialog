@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Dialog</string>
+    <string name="normal_dialog">普通对话框</string>
+    <string name="list_dialog">简单列表对话框</string>
+    <string name="single_choice_dialog">单选对话框</string>
+    <string name="multi_choice_dialog">多选对话框</string>
+    <string name="wait_dialog">等待对话框</string>
+    <string name="progress_dialog">进度条对话框</string>
+    <string name="edit_dialog">编辑对话框</string>
+    <string name="custom_dialog">自定义对话框</string>
+</resources>
