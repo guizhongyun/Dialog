@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
@@ -100,17 +101,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void showListDialog() {
-        final String[] items = {"我是1", "2222", "3333", "4444"};
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        final String[] items = new String[] { "上海", "北京", "湖南", "湖北", "海南" };
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
         builder.setTitle("简单列表对话框");
-        builder.setMessage("这是一个简单的列表对话框");
+        //千万不要加这句，不然列表显示不出来
+//        builder.setMessage("这是一个简单的列表对话框");
         builder.setIcon(R.mipmap.ic_launcher);
         builder.setItems(items, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which){
                 showText(items[which]);
             }
-        }).setPositiveButton("确定", new DialogInterface.OnClickListener() {
+        });
+        builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 showText("确定");
@@ -122,12 +125,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
 
-        builder.create().show();
+        builder.show();
     }
 
     private void showNormalDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-
         builder.setTitle("简单对话框")
                 .setIcon(R.mipmap.ic_launcher)
                 .setMessage("这是一个简单对话框")
