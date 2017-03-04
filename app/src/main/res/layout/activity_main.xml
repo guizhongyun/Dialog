@@ -31,12 +31,6 @@
         android:text="@string/multi_choice_dialog"
         />
     <Button
-        android:id="@+id/btn_wait_dialog"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/wait_dialog"
-        />
-    <Button
         android:id="@+id/btn_progress_dialog"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
